@@ -33,7 +33,7 @@ Mascota.init(
     usuarioId: UUID,
     razaId: UUID
   },
-  { sequelize, modelName: 'mascota' }
+  { sequelize, modelName: 'mascota', tableName: 'mascotas' }
 )
 
 Mascota.belongsTo(Raza, {

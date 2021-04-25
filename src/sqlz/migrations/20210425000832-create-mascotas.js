@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('mascota', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('mascotas', {
     id: {
       allowNull: false,
       type: Sequelize.UUID,
@@ -51,7 +51,7 @@ module.exports = {
       allowNull: false,
       onDelete: 'RESTRICT',
       references: {
-        model: 'usuario',
+        model: 'usuarios',
         key: 'id',
         as: 'usuarioId',
       }
@@ -61,12 +61,12 @@ module.exports = {
       allowNull: false,
       onDelete: 'RESTRICT',
       references: {
-        model: 'raza',
+        model: 'razas',
         key: 'id',
         as: 'razaId',
       }
     }
   }),
 
-  down: (queryInterface, Sequelize) => queryInterface.dropTable('mascota')
+  down: (queryInterface, Sequelize) => queryInterface.dropTable('mascotas')
 };

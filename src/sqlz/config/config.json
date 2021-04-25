@@ -22,10 +22,10 @@
     "timezone": "-04:00"
   },
   "production": {
-    "username": "yctyfsrgyqhgxc",
-    "password": "91db8f2b5a328302f88b5a539d8c0819ac7cdb2cad9f7f87464b4ee4654daade",
-    "database": "de7jqda4m6ujp3",
-    "host": "ec2-54-167-152-185.compute-1.amazonaws.com",
+    "username": "kagspqhxwfjirh",
+    "password": "045806746461ef0afcd8f79664049f2b938f12f2407bd5547f848d5ffaa47905",
+    "database": "dcofvnnj78m864",
+    "host": "ec2-107-20-153-39.compute-1.amazonaws.com",
     "port": 5432,
     "dialect": "postgres",
     "dialectOptions": {

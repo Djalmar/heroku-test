@@ -1,6 +1,7 @@
 import * as winston from 'winston'
 import { Express, Request, Response } from 'express'
-import * as AppUserRoutes from './appusers'
+import * as UsuariosRoutes from './usuarios'
+import * as MascotasRoutes from './mascotas'
 
 export function initRoutes(app: Express) {
   winston.log('info', '--> Initialisations des routes')
@@ -9,7 +10,8 @@ export function initRoutes(app: Express) {
     message: 'server is running!'
   }))
 
-  AppUserRoutes.routes(app)
+  UsuariosRoutes.routes(app)
+  MascotasRoutes.routes(app)
 
   app.all('*', (req: Request, res: Response) => res.boom.notFound())
 }

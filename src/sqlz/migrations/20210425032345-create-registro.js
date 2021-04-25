@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('registro', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('registros', {
     id: {
       allowNull: false,
       type: Sequelize.UUID,
@@ -14,5 +14,5 @@ module.exports = {
     }
   }),
 
-  down: (queryInterface, Sequelize) => queryInterface.dropTable('registro')
+  down: (queryInterface, Sequelize) => queryInterface.dropTable('registros')
 };

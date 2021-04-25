@@ -19,7 +19,7 @@ Raza.init(
     nombre: STRING(50),
     tipoMascotaId: UUID
   },
-  { sequelize, modelName: 'raza' }
+  { sequelize, modelName: 'raza', tableName: 'razas' }
 )
 
 Raza.belongsTo(TipoMascota, {

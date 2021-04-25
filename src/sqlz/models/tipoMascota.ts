@@ -17,6 +17,6 @@ TipoMascota.init(
   {
     nombre: STRING(50)
   },
-  { sequelize, modelName: 'tipo_mascota' }
+  { sequelize, modelName: 'tipo_mascota', tableName: 'tipoMascotas' }
 )
 

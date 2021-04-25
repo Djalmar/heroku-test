@@ -1,3 +1,4 @@
-import * as AppUserController from './appusers/_index'
+import * as UsuarioController from './usuarios/_index'
+import * as MascotaController from './mascotas/_index'
 
-export { AppUserController }
+export { UsuarioController, MascotaController }

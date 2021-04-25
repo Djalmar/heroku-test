@@ -1,3 +1,4 @@
-import * as AppUserDao from './appusers'
+import * as UsuarioDao from './usuarios'
+import * as MascotaDao from './mascotas'
 
-export { AppUserDao }
+export { UsuarioDao, MascotaDao }
