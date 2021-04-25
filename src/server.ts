@@ -7,7 +7,7 @@ import { json, urlencoded } from 'body-parser'
 import { Express } from 'express'
 import * as routes from './routes/_index'
 
-const PORT: number = 80
+const port: number = process.env.PORT || 3000;
 
 /**
  * Root class of your node server.
@@ -30,8 +30,8 @@ export class Server {
     this.app.use(json())
     this.app.use(boom())
     this.app.use(morgan('combined'))
-    this.app.listen(PORT, () => {
-      winston.log('info', '--> Server successfully started at port ' + PORT)
+    this.app.listen(port, () => {
+      winston.log('info', '--> Server successfully started at port ' + port)
     })
     routes.initRoutes(this.app)
   }
