@@ -7,7 +7,7 @@ import { json, urlencoded } from 'body-parser'
 import { Express } from 'express'
 import * as routes from './routes/_index'
 
-const port: number = process.env.PORT || 3000;
+const port: any = process.env.PORT || 3000
 
 /**
  * Root class of your node server.
