@@ -17,8 +17,8 @@
   "scripts": {
     "build": "gulp build",
     "doc": "gulp generate:doc",
-    "start": "cross-env NODE_ENV=development gulp watch",
-    "start:prod": "cross-env NODE_ENV=production gulp watch",
+    "start": "cross-env NODE_ENV=production node build/server",
+    "start:dev": "cross-env NODE_ENV=development gulp watch",
     "run:test": "cross-env NODE_ENV=test gulp test",
     "tslint": "gulp tslint",
     "prettify": "./node_modules/.bin/tsfmt -r --baseDir ./src",
@@ -42,9 +42,7 @@
     "pg-hstore": "2.3.3",
     "sequelize": "5.21.5",
     "uuid": "3.4.0",
-    "winston": "3.2.1"
-  },
-  "devDependencies": {
+    "winston": "3.2.1",
     "chai": "4.2.0",
     "extendify": "1.0.0",
     "glob": "7.1.6",
@@ -68,6 +66,7 @@
     "typescript": "3.8.2",
     "typescript-formatter": "7.2.2"
   },
+  "devDependencies": {},
   "engines": {
     "node": "14.x"
   },
