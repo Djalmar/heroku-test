@@ -1,35 +1,26 @@
 import * as uuid from 'uuid'
-import { AppUser } from './../sqlz/models/appuser'
-import { Language } from '../sqlz/models/language'
+import { Usuario } from '../sqlz/models/usuario'
 
 export function create(appUser: any): Promise<any> {
-
-  return Language.findOne({
-    where: { name: 'fr' }
-  })
-    .then(language => {
-      return AppUser
-        .create({
-          id: uuid.v1(),
-          email: appUser.email,
-          pwd: appUser.pwd,
-          languageId: language.get('id')
-        })
+  return Usuario
+    .create({
+      id: uuid.v1(),
+      email: appUser.email,
+      pwd: appUser.pwd
     })
 }
 
 export function findAll(): Promise<any> {
-  return AppUser
-    .findAll({ include: [{ all: true }] })
+  return Usuario
+    .findAll()
 }
 
 export function login(appUser: any): Promise<any> {
-  return AppUser
+  return Usuario
     .findOne({
       where: {
         email: appUser.email,
         pwd: appUser.pwd
-      },
-      include: [Language]
+      }
     })
 }

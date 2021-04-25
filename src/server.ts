@@ -31,7 +31,7 @@ export class Server {
     this.app.use(boom())
     this.app.use(morgan('combined'))
     this.app.listen(PORT, () => {
-      winston.log('info', '--> Server successfully started at port %d', PORT)
+      winston.log('info', '--> Server successfully started at port ' + PORT)
     })
     routes.initRoutes(this.app)
   }

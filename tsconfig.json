@@ -21,7 +21,8 @@
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    ".sequelizerc"
   ],
   "exclude": [
     "node_modules"
