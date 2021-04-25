@@ -22,9 +22,9 @@
     "timezone": "-04:00"
   },
   "production": {
-    "username": "wiwgutqtcquvfe",
-    "password": "365b6349ef294e26a8b4d15c61c3950fd9a0073838bad9245b48709185552344",
-    "database": "d5cots405hfm4",
+    "username": "yctyfsrgyqhgxc",
+    "password": "91db8f2b5a328302f88b5a539d8c0819ac7cdb2cad9f7f87464b4ee4654daade",
+    "database": "de7jqda4m6ujp3",
     "host": "ec2-54-167-152-185.compute-1.amazonaws.com",
     "port": 5432,
     "dialect": "postgres",

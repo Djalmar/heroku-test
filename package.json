@@ -17,7 +17,7 @@
   "scripts": {
     "build": "gulp build",
     "doc": "gulp generate:doc",
-    "start": "cross-env NODE_ENV=production node build/server",
+    "start": "cross-env NODE_ENV=production gulp watch",
     "start:dev": "cross-env NODE_ENV=development gulp watch",
     "run:test": "cross-env NODE_ENV=test gulp test",
     "tslint": "gulp tslint",
