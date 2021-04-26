@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
-import { MascotaDao } from '../../dao/_index'
+import { FotografiaDao, MascotaDao } from '../../dao/_index'
 import { body, validationResult } from 'express-validator'
+import * as winston from 'winston'
 
 
 export function create(req: Request, res: Response) {
@@ -17,7 +18,7 @@ export function create(req: Request, res: Response) {
   const errors = validationResult(req)
 
   if (errors.isEmpty()) {
-    return MascotaDao.create(req.body)
+    return MascotaDao.create(req.body, req.files)
       .then(mascota => res.status(201).send(mascota))
       .catch(error => {
         console.log(error)

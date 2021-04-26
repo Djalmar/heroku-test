@@ -5,7 +5,7 @@ import { Usuario } from './usuario'
 import sequelize from './_index'
 
 export class Mascota extends Model {
-
+  static Fotografias: any
 }
 
 export class MascotaModel {
