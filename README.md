@@ -35,7 +35,7 @@ El servicio se ejecuta localmente en http://localhost:3000
 
 ## APIDOC
 
-Ir a [documentación](asd.com)
+Ir a [documentación](https://murmuring-peak-15403.herokuapp.com)
 
 ## Compilar
 
