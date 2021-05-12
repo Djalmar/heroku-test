@@ -574,7 +574,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n[    {\n      \"id\": \"a67da050-a6e3-11eb-91bd-45f887b013cf\",\n      \"nombre\": \"Canino\",\n      \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n      \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n  },\n  {\n      \"id\": \"a67da051-a6e3-11eb-91bd-45f887b013cf\",\n      \"nombre\": \"Felino\",\n      \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n      \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n  },\n  {\n      \"id\": \"a67da052-a6e3-11eb-91bd-45f887b013cf\",\n      \"nombre\": \"Ave\",\n      \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n      \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n  },\n  {\n      \"id\": \"a67da053-a6e3-11eb-91bd-45f887b013cf\",\n      \"nombre\": \"Reptil\",\n      \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n      \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n  }]",
+          "content": "    HTTP/1.1 200 OK\n[    {\n        \"id\": \"a67da050-a6e3-11eb-91bd-45f887b013cf\",\n        \"nombre\": \"Canino\",\n        \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n        \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n    },\n    {\n        \"id\": \"a67da051-a6e3-11eb-91bd-45f887b013cf\",\n        \"nombre\": \"Felino\",\n        \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n        \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n    },\n    {\n        \"id\": \"a67da052-a6e3-11eb-91bd-45f887b013cf\",\n        \"nombre\": \"Ave\",\n        \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n        \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n    },\n    {\n        \"id\": \"a67da053-a6e3-11eb-91bd-45f887b013cf\",\n        \"nombre\": \"Reptil\",\n        \"createdAt\": \"2021-04-26T23:03:44.597Z\",\n        \"updatedAt\": \"2021-04-26T23:03:44.597Z\"\n    }]",
           "type": "json"
         }
       ]
@@ -585,6 +585,200 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "https://murmuring-peak-15403.herokuapp.com/api/tipoMascotas"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/usuarios/:id",
+    "title": "Obtener usuario por id",
+    "name": "GetUsuario",
+    "group": "Usuario",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Id del usuario</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "correo",
+            "description": "<p>Correo del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "telefono",
+            "description": "<p>Telefono del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "direccion",
+            "description": "<p>Direccion del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "ubicacion",
+            "description": "<p>Ubicacion del usuario</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n    \"nombre\": \"Fabiola\",\n    \"correo\": \"fabiola3@fabiola.com\",\n    \"telefono\": \"72503006\",\n    \"direccion\": \"Calle 1\",\n    \"ubicacion\": \"27.36846,1.17402\",\n    \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n    \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/usuarios.ts",
+    "groupTitle": "Usuario",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/usuarios/:id"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/usuarios",
+    "title": "Crear un usuario",
+    "name": "PostUsuario",
+    "group": "Usuario",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre del usuario</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "correo",
+            "description": "<p>Correo del usuario</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "telefono",
+            "description": "<p>Telefono del usuario</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Password del usuario</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "direccion",
+            "description": "<p>Direccion del usuario</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "ubicacion",
+            "description": "<p>Ubicacion del usuario</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Identificador unico del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "correo",
+            "description": "<p>Correo del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "telefono",
+            "description": "<p>Telefono del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "direccion",
+            "description": "<p>Direccion del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "ubicacion",
+            "description": "<p>Ubicacion del usuario</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n      \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n      \"nombre\": \"Fabiola\",\n      \"correo\": \"fabiola3@fabiola.com\",\n      \"telefono\": \"72503006\",\n      \"direccion\": \"Calle 1\",\n      \"ubicacion\": \"27.36846,1.17402\",\n      \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n      \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/usuarios.ts",
+    "groupTitle": "Usuario",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/usuarios"
       }
     ]
   }
