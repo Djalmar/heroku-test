@@ -90,7 +90,7 @@
     "version": "0.0.1",
     "description": "Servicio backend para las mascotas perdidas",
     "title": "bobby-backend",
-    "url" : "https://murmuring-peak-15403.herokuapp.com/api",
+    "url": "https://murmuring-peak-15403.herokuapp.com/api",
     "sampleUrl": "https://murmuring-peak-15403.herokuapp.com/api"
   }
 }

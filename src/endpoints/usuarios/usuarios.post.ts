@@ -3,14 +3,14 @@ import { UsuarioDao } from '../../dao/_index'
 import { body, validationResult } from 'express-validator'
 
 export function create(req: Request, res: Response) {
-
+  console.log('create usuario controller')
   body('password', 'El password es requerido').notEmpty()
   body('correo', 'El correo es requerido').notEmpty()
   body('correo', 'Es requerido un correo válido').isEmail()
 
   const result = validationResult(req)
   if (result.isEmpty()) {
-    return UsuarioDao.create(req.body)
+    return UsuarioDao.create(req.body, req.file)
       .then(usuario => res.status(201).send(usuario))
       .catch(error => res.boom.badRequest(error))
   } else {

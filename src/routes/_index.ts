@@ -5,6 +5,8 @@ import * as MascotasRoutes from './mascotas'
 import * as RazasRoutes from './razas'
 import * as TipoMascotasRoutes from './tipoMascotas'
 import * as FotografiasRoutes from './fotografias'
+import * as RegistrosRoutes from './registros'
+import * as SeguimientoRoutes from './seguimientos'
 
 export function initRoutes(app: Express) {
   winston.log('info', '--> Initialisations des routes')
@@ -20,6 +22,8 @@ export function initRoutes(app: Express) {
   RazasRoutes.routes(app)
   TipoMascotasRoutes.routes(app)
   FotografiasRoutes.routes(app)
+  RegistrosRoutes.routes(app)
+  SeguimientoRoutes.routes(app)
 
   app.all('*', (req: Request, res: Response) => res.boom.notFound())
 }

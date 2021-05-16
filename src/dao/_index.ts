@@ -3,5 +3,7 @@ import * as MascotaDao from './mascotas'
 import * as TipoMascotaDao from './tipoMascotas'
 import * as RazaDao from './razas'
 import * as FotografiaDao from './fotografias'
+import * as RegistroDao from './registros'
+import * as SeguimientoDao from './seguimientos'
 
-export { UsuarioDao, MascotaDao, TipoMascotaDao, RazaDao, FotografiaDao }
+export { UsuarioDao, MascotaDao, TipoMascotaDao, RazaDao, FotografiaDao, RegistroDao, SeguimientoDao }

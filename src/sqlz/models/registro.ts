@@ -1,8 +1,10 @@
-import { Model, STRING, ENUM, TEXT, DATE } from 'sequelize'
+import { Model, STRING, ENUM, TEXT, DATE, UUID } from 'sequelize'
 import sequelize from './_index'
 
 export class Registro extends Model {
-
+  static Mascota: any
+  static Usuario: any
+  static Seguimientos: any
 }
 
 export class RegistroModel {
@@ -23,8 +25,10 @@ Registro.init(
     descripcion: TEXT,
     ubicacion: STRING(30),
     fechaPerdida: DATE,
-    fechaEncuentro: DATE,
-    tipo: ENUM('perdida', 'encuentro')
+    fechaHallazgo: DATE,
+    tipo: ENUM('perdida', 'encuentro'),
+    usuarioId: UUID,
+    mascotaId: UUID
   },
   { sequelize, modelName: 'registro' }
 )

@@ -1,16 +1,14 @@
 import * as uuid from 'uuid'
 import { Usuario } from '../sqlz/models/usuario'
 
-export function create(usuario: any): Promise<any> {
+export function create(usuario: any, fotografia: any): Promise<any> {
+  console.log('create dao')
   return Usuario
     .create({
       id: uuid.v1(),
       nombre: usuario.nombre,
       correo: usuario.correo,
-      password: usuario.password,
-      telefono: usuario.telefono,
-      direccion: usuario.direccion,
-      ubicacion: usuario.ubicacion
+      fotografia: fotografia.buffer
     })
 }
 
@@ -19,8 +17,20 @@ export function findAll(): Promise<any> {
     .findAll()
 }
 
-export function findById(id): Promise<any> {
+export function findById(id: any): Promise<any> {
   return Usuario.findByPk(id)
+}
+
+export function findByCorreo(correo: any): Promise<any> {
+  return Usuario.findOne({
+    where: {
+      correo
+    }
+  })
+}
+
+export function findMascotas(id: any): Promise<any> {
+  return Usuario.findByPk(id, { include: [Usuario.Mascotas] })
 }
 
 export function login(usuario: any): Promise<any> {

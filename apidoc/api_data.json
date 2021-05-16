@@ -242,6 +242,258 @@
     ]
   },
   {
+    "type": "get",
+    "url": "/mascotas/avistadas",
+    "title": "Listar mascotas avistadas",
+    "name": "GetMascotaAvistada",
+    "group": "Mascota",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Id de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "edad",
+            "description": "<p>Edad de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "color",
+            "description": "<p>Color de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tama",
+            "description": "<p>ño Tamaño de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "sexo",
+            "description": "<p>Sexo de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estadoSalud",
+            "description": "<p>Estado de salud de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estado",
+            "description": "<p>Estado perdido de la mascota.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[  {\n    \"id\": \"dbcfe000-a6e4-11eb-80b6-279f485e64f4\",\n    \"nombre\": \"morita\",\n    \"edad\": 12,\n    \"color\": \"negro\",\n    \"tamaño\": \"grande\",\n    \"sexo\": true,\n    \"estadoSalud\": \"saludable\",\n    \"estado\": \"encontrado\",\n    \"usuarioId\": \"c1d81410-a6e4-11eb-80b6-279f485e64f4\",\n    \"razaId\": \"a690da30-a6e3-11eb-91bd-45f887b013cf\",\n    \"fotografias\": [\n      fotografias de la mascota\n  ]\n}, { ... }, { ... }]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/mascotas.ts",
+    "groupTitle": "Mascota",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/mascotas/avistadas"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/mascotas/encontradas",
+    "title": "Listar mascotas encontradas",
+    "name": "GetMascotaEncontrada",
+    "group": "Mascota",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Id de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "edad",
+            "description": "<p>Edad de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "color",
+            "description": "<p>Color de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tama",
+            "description": "<p>ño Tamaño de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "sexo",
+            "description": "<p>Sexo de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estadoSalud",
+            "description": "<p>Estado de salud de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estado",
+            "description": "<p>Estado encontrado de la mascota.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[  {\n      \"id\": \"dbcfe000-a6e4-11eb-80b6-279f485e64f4\",\n      \"nombre\": \"morita\",\n      \"edad\": 12,\n      \"color\": \"negro\",\n      \"tamaño\": \"grande\",\n      \"sexo\": true,\n      \"estadoSalud\": \"saludable\",\n      \"estado\": \"encontrado\",\n      \"usuarioId\": \"c1d81410-a6e4-11eb-80b6-279f485e64f4\",\n      \"razaId\": \"a690da30-a6e3-11eb-91bd-45f887b013cf\",\n      \"fotografias\": [\n        fotografias de la mascota\n    ]\n}, { ... }, { ... }]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/mascotas.ts",
+    "groupTitle": "Mascota",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/mascotas/encontradas"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/mascotas/perdidas",
+    "title": "Listar mascotas perdidas",
+    "name": "GetMascotaPerdida",
+    "group": "Mascota",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Id de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "edad",
+            "description": "<p>Edad de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "color",
+            "description": "<p>Color de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tama",
+            "description": "<p>ño Tamaño de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "sexo",
+            "description": "<p>Sexo de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estadoSalud",
+            "description": "<p>Estado de salud de la mascota.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "estado",
+            "description": "<p>Estado perdido de la mascota.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[  {\n    \"id\": \"dbcfe000-a6e4-11eb-80b6-279f485e64f4\",\n    \"nombre\": \"morita\",\n    \"edad\": 12,\n    \"color\": \"negro\",\n    \"tamaño\": \"grande\",\n    \"sexo\": true,\n    \"estadoSalud\": \"saludable\",\n    \"estado\": \"perdido\",\n    \"usuarioId\": \"c1d81410-a6e4-11eb-80b6-279f485e64f4\",\n    \"razaId\": \"a690da30-a6e3-11eb-91bd-45f887b013cf\",\n    \"fotografias\": [\n      fotografias de la mascota\n  ]\n}, { ... }, { ... }]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/mascotas.ts",
+    "groupTitle": "Mascota",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/mascotas/perdidas"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/mascotas",
     "title": "Crear una mascota",
@@ -478,6 +730,186 @@
     ]
   },
   {
+    "type": "get",
+    "url": "/registros?mascotaId=id",
+    "title": "Obtener registros por el id de mascota",
+    "name": "GetRegistroMascota",
+    "group": "Raza",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "mascotaId",
+            "description": "<p>Id de la mascota</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Id del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.descripcion",
+            "description": "<p>Descripcion del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.ubicacion",
+            "description": "<p>Ubicacion del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.tipo",
+            "description": "<p>Tipo del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.estado",
+            "description": "<p>Estado del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.usuarioId",
+            "description": "<p>Id del usuario.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.mascotaId",
+            "description": "<p>Id de la mascota.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[    {\n    \"id\": \"2f59d640-b5ef-11eb-a31e-a789e0481240\",\n    \"descripcion\": \"se perdio\",\n    \"ubicacion\": \"1231,12313\",\n    \"tipo\": \"perdida\",\n    \"estado\": \"perdido\",\n    \"usuarioId\": \"b7820ba0-b5ea-11eb-8e03-37dd8584d9be\",\n    \"mascotaId\": \"6213b4a0-b5ec-11eb-9d94-0be9e3c268b9\",\n    \"updatedAt\": \"2021-05-16T02:34:06.117Z\",\n    \"createdAt\": \"2021-05-16T02:34:06.117Z\",\n    \"fechaPerdida\": null,\n    \"fechaHallazgo\": null\n},{}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/registros.ts",
+    "groupTitle": "Raza",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/registros?mascotaId=id"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/registros?usuarioId=id",
+    "title": "Obtener registros por el id del usuario",
+    "name": "GetRegistroUsuario",
+    "group": "Raza",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "usuarioId",
+            "description": "<p>Id del usuario</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.id",
+            "description": "<p>Id del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.descripcion",
+            "description": "<p>Descripcion del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.ubicacion",
+            "description": "<p>Ubicacion del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.tipo",
+            "description": "<p>Tipo del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.estado",
+            "description": "<p>Estado del registro.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.usuarioId",
+            "description": "<p>Id del usuario.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "array.mascotaId",
+            "description": "<p>Id de la mascota.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n[    {\n    \"id\": \"2f59d640-b5ef-11eb-a31e-a789e0481240\",\n    \"descripcion\": \"se perdio\",\n    \"ubicacion\": \"1231,12313\",\n    \"tipo\": \"perdida\",\n    \"estado\": \"perdido\",\n    \"usuarioId\": \"b7820ba0-b5ea-11eb-8e03-37dd8584d9be\",\n    \"mascotaId\": \"6213b4a0-b5ec-11eb-9d94-0be9e3c268b9\",\n    \"updatedAt\": \"2021-05-16T02:34:06.117Z\",\n    \"createdAt\": \"2021-05-16T02:34:06.117Z\",\n    \"fechaPerdida\": null,\n    \"fechaHallazgo\": null\n},{}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/registros.ts",
+    "groupTitle": "Raza",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/registros?usuarioId=id"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/razas",
     "title": "Crear una raza",
@@ -547,6 +979,78 @@
     ]
   },
   {
+    "type": "post",
+    "url": "/registros",
+    "title": "",
+    "name": "PostRegistro",
+    "group": "Raza",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "descripcion",
+            "description": "<p>Descripcion del registro.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "ubicacion",
+            "description": "<p>Ubicacion del registro.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tipo",
+            "description": "<p>Tipo del registro.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "estado",
+            "description": "<p>Estado del registro.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "usuarioId",
+            "description": "<p>Id del usuario.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "mascotaId",
+            "description": "<p>Id de la mascota.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"id\": \"2f59d640-b5ef-11eb-a31e-a789e0481240\",\n    \"descripcion\": \"se perdio\",\n    \"ubicacion\": \"1231,12313\",\n    \"tipo\": \"perdida\",\n    \"estado\": \"perdido\",\n    \"usuarioId\": \"b7820ba0-b5ea-11eb-8e03-37dd8584d9be\",\n    \"mascotaId\": \"6213b4a0-b5ec-11eb-9d94-0be9e3c268b9\",\n    \"updatedAt\": \"2021-05-16T02:34:06.117Z\",\n    \"createdAt\": \"2021-05-16T02:34:06.117Z\",\n    \"fechaPerdida\": null,\n    \"fechaHallazgo\": null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/registros.ts",
+    "groupTitle": "Raza",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/registros"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/tipoMascotas",
     "title": "Obtener el tipo de mascotas",
@@ -590,9 +1094,71 @@
   },
   {
     "type": "get",
-    "url": "/usuarios/:id",
-    "title": "Obtener usuario por id",
+    "url": "/usuarios/:correo",
+    "title": "Obtener usuario por correo",
     "name": "GetUsuario",
+    "group": "Usuario",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "correo",
+            "description": "<p>Correo del usuario</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nombre",
+            "description": "<p>Nombre del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "correo",
+            "description": "<p>Correo del usuario</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "telefono",
+            "description": "<p>Telefono del usuario</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "    HTTP/1.1 200 OK\n{\n     \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n     \"nombre\": \"Fabiola\",\n     \"correo\": \"fabiola3@fabiola.com\",\n     \"fotografia\": \"--- fotografia en base 64 ---\",\n     \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n     \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/usuarios.ts",
+    "groupTitle": "Usuario",
+    "sampleRequest": [
+      {
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/usuarios/:correo"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/usuarios/:id/mascotas",
+    "title": "Obtener usuario con sus mascotas",
+    "name": "GetUsuarioMascota",
     "group": "Usuario",
     "parameter": {
       "fields": {
@@ -633,24 +1199,17 @@
           },
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Object",
             "optional": false,
-            "field": "direccion",
-            "description": "<p>Direccion del usuario</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "ubicacion",
-            "description": "<p>Ubicacion del usuario</p>"
+            "field": "mascotas",
+            "description": "<p>Mascotas del usuario</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n    \"nombre\": \"Fabiola\",\n    \"correo\": \"fabiola3@fabiola.com\",\n    \"telefono\": \"72503006\",\n    \"direccion\": \"Calle 1\",\n    \"ubicacion\": \"27.36846,1.17402\",\n    \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n    \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n    \"nombre\": \"Fabiola\",\n    \"correo\": \"fabiola3@fabiola.com\",\n    \"fotografia\": \"--- fotografia en base 64 ---\",\n    \"mascotas\": [{}, {}] // array con las mascotas del usuario\n    \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n    \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n}",
           "type": "json"
         }
       ]
@@ -660,7 +1219,7 @@
     "groupTitle": "Usuario",
     "sampleRequest": [
       {
-        "url": "https://murmuring-peak-15403.herokuapp.com/api/usuarios/:id"
+        "url": "https://murmuring-peak-15403.herokuapp.com/api/usuarios/:id/mascotas"
       }
     ]
   },
@@ -691,29 +1250,8 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "telefono",
-            "description": "<p>Telefono del usuario</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "password",
-            "description": "<p>Password del usuario</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "direccion",
-            "description": "<p>Direccion del usuario</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "ubicacion",
-            "description": "<p>Ubicacion del usuario</p>"
+            "field": "fotografia",
+            "description": "<p>Fotografía del usuario en base 64</p>"
           }
         ]
       }
@@ -746,29 +1284,15 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "telefono",
-            "description": "<p>Telefono del usuario</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "direccion",
-            "description": "<p>Direccion del usuario</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "ubicacion",
-            "description": "<p>Ubicacion del usuario</p>"
+            "field": "fotografia",
+            "description": "<p>Fotografia del usuario en base 64</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n      \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n      \"nombre\": \"Fabiola\",\n      \"correo\": \"fabiola3@fabiola.com\",\n      \"telefono\": \"72503006\",\n      \"direccion\": \"Calle 1\",\n      \"ubicacion\": \"27.36846,1.17402\",\n      \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n      \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n  }",
+          "content": "    HTTP/1.1 200 OK\n{\n       \"id\": \"507027a0-b1b0-11eb-b6db-4f9e5d82ac9e\",\n       \"nombre\": \"Fabiola\",\n       \"correo\": \"fabiola3@fabiola.com\",\n       \"fotografia\": \"--- fotografia en base 64 ---\",\n       \"createdAt\": \"2021-05-10T16:53:58.683Z\",\n       \"updatedAt\": \"2021-05-10T16:53:58.683Z\"\n   }",
           "type": "json"
         }
       ]

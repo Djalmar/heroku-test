@@ -17,21 +17,9 @@ module.exports = {
       type: Sequelize.STRING(50),
       unique: true
     },
-    password: {
+    fotografia: {
       allowNull: false,
-      type: Sequelize.STRING(255)
-    },
-    telefono: {
-      allowNull: false,
-      type: Sequelize.STRING(50)
-    },
-    direccion: {
-      allowNull: false,
-      type: Sequelize.STRING(150)
-    },
-    ubicacion: {
-      allowNull: false,
-      type: Sequelize.STRING(30)
+      type: Sequelize.BLOB
     },
     createdAt: {
       allowNull: false,
