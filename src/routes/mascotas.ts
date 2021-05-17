@@ -93,7 +93,7 @@ export function routes(app: Express) {
 *
 * @apiSuccess {String} id Id de la mascota.
 * @apiSuccess {String} nombre Nombre de la mascota.
-* @apiSuccess {Number} edad Edad de la mascota.
+* @apiSuccess {String} edad Edad de la mascota.
 * @apiSuccess {String} color Color de la mascota.
 * @apiSuccess {String} tamaño Tamaño de la mascota.
 * @apiSuccess {Boolean} sexo Sexo de la mascota.
@@ -105,7 +105,7 @@ export function routes(app: Express) {
 *[  {
       "id": "dbcfe000-a6e4-11eb-80b6-279f485e64f4",
       "nombre": "morita",
-      "edad": 12,
+      "edad": "12",
       "color": "negro",
       "tamaño": "grande",
       "sexo": true,
@@ -162,7 +162,7 @@ export function routes(app: Express) {
   * @apiGroup Mascota
   *
   * @apiParam {String} nombre Nombre de la mascota.
-  * @apiParam {Number} edad Edad de la mascota.
+  * @apiParam {String} edad Edad de la mascota.
   * @apiParam {String} color Color de la mascota.
   * @apiParam {String=pequeño,mediano,grande} tamaño Tamaño de la mascota.
   * @apiParam {Boolean} sexo Sexo de la mascota true=masculino, false=femenino.
@@ -185,7 +185,7 @@ export function routes(app: Express) {
   *[  {
         "id": "dbcfe000-a6e4-11eb-80b6-279f485e64f4",
         "nombre": "morita",
-        "edad": 12,
+        "edad": "12",
         "color": "negro",
         "tamaño": "grande",
         "sexo": true,

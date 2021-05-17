@@ -15,7 +15,7 @@ module.exports = {
     },
     edad: {
       allowNull: false,
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING(50),
       defaultValue: 1
     },
     color: {

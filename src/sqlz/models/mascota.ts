@@ -14,7 +14,7 @@ export class Mascota extends Model {
 export class MascotaModel {
   id: string
   nombre: string
-  edad: number
+  edad: string
   color: string
   tamaño: 'pequeño' | 'mediano' | 'grande'
   sexo: boolean // true masculino, false femenino
@@ -27,7 +27,7 @@ export class MascotaModel {
 Mascota.init(
   {
     nombre: STRING(50),
-    edad: INTEGER,
+    edad: STRING(50),
     color: STRING(50),
     tamaño: ENUM('pequeño', 'mediano', 'grande'),
     sexo: BOOLEAN,
